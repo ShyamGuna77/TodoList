@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #101114;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    font-size: 1.6rem;
+    color: #00ffc4;
+}
+
+header, form {
+    display: flex;
+    float: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+    
+}
+
+.todo-input {
+    width: 100%;
+    padding: 0.5rem 3.5rem 0.7rem 0.9rem; 
+    font-size: 2rem;
+    border: 2px solid #7f8085;
+    border-radius: 10px;
+    background: white;
+}
+
+.todo-button {
+    position: absolute;
+    right: 0.01rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00ffc4;
+    color: #101114;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.todo-button i {
+    font-size: 1.5rem; 
+}
+
+.todo-button:hover {
+    background-color: #101114;
+    color: #00ffc4;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.todo-list {
+    width: 100%; 
+    max-width: 500px;
+    list-style: none;
+    margin: 0 auto; 
+    padding: 0;
+}
+
+.todo {
+   margin: 0.6rem;
+    background-color: #fff;
+    color: #101114;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem; 
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+    padding: 0 0.5rem; 
+    text-align: left;
+}
+
+.complete-btn {
+    background: rgb(72, 122, 230);
+    color: #f9f9f9;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.trash-btn {
+    background-color: #FF2400;
+    color: #f9f9f9;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.fa-check,.fa-trash{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #101114;
+    width: 9rem;
+    cursor: pointer;
+    padding: 1.3rem;
+    border-radius: 10px;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #00ffc4;
+    color: black;
+    top: 0;
+    right: 0;
+    padding: 1.3rem;
+    pointer-events: none;
+
+}
+
+
+
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+                   Media Queries */
+
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 90%;
+        margin-left: 30px;
+    }
+    
+    .todo-input {
+        font-size: 1.5rem;
+        padding: 0.5rem 3rem 0.7rem 0.7rem;
+        
+    }
+    
+    .todo-button {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .todo {
+        font-size: 1.3rem;
+        max-width:100%; 
+        padding: 0.4rem;
+       
+    }
+}
+
+/* For mobile phones (Android, iPhone) */
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2rem;
+    }
+    
+    .todo-input {
+        font-size: 1.3rem;
+        padding: 0.5rem 2.5rem 0.6rem 0.7rem;
+    }
+    
+    .todo-button {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+    
+    .todo {
+        font-size: 1.2rem;
+        max-width: 100%;
+        padding: 0.5rem;
+        margin: 0.4rem;
+    }
+    
+    .complete-btn, .trash-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* For smaller mobile devices (under 320px width) */
+@media (max-width: 320px) {
+    header {
+        font-size: 1rem;
+    }
+    
+    .todo-input {
+        font-size: 1rem;
+        padding: 0.4rem 2rem 0.5rem 0.6rem;
+    }
+    
+    .todo-button {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    
+    .todo {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 0.4rem;
+        margin: 0.3rem;
+    }
+    
+    .complete-btn, .trash-btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
